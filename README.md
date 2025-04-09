@@ -1,6 +1,5 @@
 # Pokemon
 
-Here’s a basic `README.md` template for a **Next.js** project that covers installation, development, and deployment instructions:
 
 ---
 
@@ -10,11 +9,6 @@ Here’s a basic `README.md` template for a **Next.js** project that covers inst
 A modern web application built with [Next.js](https://nextjs.org/), React, and Tailwind CSS.
 
 ## 📦 Project Setup
-
-### Prerequisites
-
-- Node.js (v18 or higher recommended)
-- npm or yarn
 
 ### Installation
 
