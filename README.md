@@ -10,10 +10,17 @@ A modern web application built with [Next.js](https://nextjs.org/), React, and T
 
 ## 📦 Project Setup
 
+
+
 ### Installation
 
+
 ```bash
-# Using npm
+# run command in vs code termianl 
+git clone https://github.com/Ravan096/pokemon.git
+# use command to navigate project folder
+cd your-repo-name     i.e: cd pokemon
+# run npm
 npm install
 
 # Or using yarn
