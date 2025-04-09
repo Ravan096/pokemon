@@ -1,6 +1,7 @@
 'use client'
 import Loader from "@/components/Loader";
 import axios from "axios";
+import { useRouter } from "next/navigation";
 import { useState, useEffect, use } from "react";
 
 interface PokemonDetailsProps {
@@ -176,6 +177,7 @@ export default function PokemonDetails({ params }: { params: Promise<{ pokemonde
     const [pokemonData, setPokemonData] = useState<PokemonDetailsDto | null>(null);
     const [isLoading, setIsLoading] = useState<Boolean>();
     const [mainImage, setMainImage] = useState<string | null>();
+    const router = useRouter();
 
 
     const getPokemonDetail = async () => {
@@ -196,12 +198,20 @@ export default function PokemonDetails({ params }: { params: Promise<{ pokemonde
     }, [])
 
     return (
-        <div className="flex flex-col items-center justify-center min-h-screen p-2 bg-gray-100">
+        <div className="flex flex-col items-center justify-start min-h-screen p-2 bg-gray-100">
             {
                 isLoading ? (
                     <Loader />
                 ) : (
                     <>
+                        <div className="w-full py-2">
+                            <button
+                                onClick={() => router.back()}
+                                className="px-3 py-1 bg-amber-500 text-black rounded disabled:opacity-50 cursor-pointer"
+                            >
+                                Back to Home
+                            </button>
+                        </div>
                         <div className="bg-white rounded-2xl w-full">
                             <div className="container mx-auto px-4 py-8">
                                 <div className="flex flex-wrap -mx-4">
@@ -267,7 +277,6 @@ export default function PokemonDetails({ params }: { params: Promise<{ pokemonde
                                 </div>
                             </div>
                         </div>
-
                     </>
                 )
             }
